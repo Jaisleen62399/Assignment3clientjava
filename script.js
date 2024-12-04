@@ -33,4 +33,20 @@ async function fetchArtistData(artistName) {
     musicResult.innerHTML = `<p style="color: red;">${error.message}</p>`;
   }
 }
+// Function to display the artist data in the result section
+function displayArtistData(life_span, disambiguation, albums) {
+  const artist = artistInput.value.trim(); // Assuming the artist name is still available from input
+
+  // Displaying the artist details
+  musicResult.innerHTML = `
+    <h2>${artist}</h2>
+    <p><strong>Disambiguation:</strong> ${disambiguation || "No additional information available"}</p>
+    <p><strong>Life Span:</strong> ${life_span ? `${life_span.begin} - ${life_span.end || "Present"}` : "Information not available"}</p>
+    <h3>Top Albums:</h3>
+    <ul>
+      ${albums.length > 0 ? albums.map(album => `<li>${album}</li>`).join('') : '<li>No albums found</li>'}
+    </ul>
+  `;
+}
+
 
