@@ -15,3 +15,38 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #67dd19;
+    margin-top: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.search-container {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+input {
+    padding: 15px;
+    width: 300px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+button {
+    padding: 15px 25px;
+    background-color: #3498db;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #b93c29;
+}
